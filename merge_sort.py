@@ -6,8 +6,6 @@ def merge_sort(arr):
         return
 
     else:
-        start, end = arr[0], arr[-1]
-
         mid = len(arr) // 2
         # Left and right sides of array
         l_arr = arr[:mid]
