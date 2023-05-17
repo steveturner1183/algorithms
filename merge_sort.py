@@ -40,8 +40,6 @@ def merge_sort(arr):
             k += 1
             j += 1
 
-        print(arr)
-
 
 class Test(unittest.TestCase):
     def test_merge_1(self):
