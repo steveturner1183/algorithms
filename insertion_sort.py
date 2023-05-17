@@ -7,9 +7,7 @@ def insertion_sort(arr):
 
     while i < len(arr)-1:
         while arr[j] < arr[j-1]:
-            temp = arr[j-1]
-            arr[j-1] = arr[j]
-            arr[j] = temp
+            arr[j-1], arr[j] = arr[j], arr[j-1]
             j -= 1
         i += 1
         j = i + 1
