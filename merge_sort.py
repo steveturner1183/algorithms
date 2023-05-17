@@ -2,13 +2,13 @@ import unittest
 
 
 def merge_sort(arr):
-    if len(arr) <= 1:
+    length_arr = len(arr)
+
+    if length_arr <= 1:
         return
 
     else:
-        start, end = arr[0], arr[-1]
-
-        mid = len(arr) // 2
+        mid = length_arr // 2
         # Left and right sides of array
         l_arr = arr[:mid]
         r_arr = arr[mid:]
@@ -17,8 +17,8 @@ def merge_sort(arr):
         merge_sort(l_arr)
         merge_sort(r_arr)
 
-        l_size = len(l_arr)
-        r_size = len(r_arr)
+        l_size = mid
+        r_size = length_arr - mid
 
         i = j = k = 0
 
@@ -45,8 +45,8 @@ def merge_sort(arr):
 
 class Test(unittest.TestCase):
     def test_merge_1(self):
-        arr1 = [1, 3, 5, 2, 4, 6]
-        expected = [1, 2, 3, 4, 5, 6]
+        arr1 = [1, 3, 5, 2, 4, 6, 1]
+        expected = [1, 1, 2, 3, 4, 5, 6]
         merge_sort(arr1)
         self.assertEqual(expected, arr1)
 
