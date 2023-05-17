@@ -40,10 +40,12 @@ def merge_sort(arr):
             k += 1
             j += 1
 
+        print(arr)
+
 
 class Test(unittest.TestCase):
     def test_merge_1(self):
-        arr1 = [1, 3, 5, 2, 4, 6]
+        arr1 = [1, 5, 3, 6, 4, 2]
         expected = [1, 2, 3, 4, 5, 6]
         merge_sort(arr1)
         self.assertEqual(expected, arr1)
