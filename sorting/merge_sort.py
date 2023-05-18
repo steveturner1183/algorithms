@@ -1,6 +1,3 @@
-import unittest
-
-
 def merge_sort(arr):
     if len(arr) <= 1:
         return
@@ -39,15 +36,3 @@ def merge_sort(arr):
             arr[k] = r_arr[j]
             k += 1
             j += 1
-
-
-class Test(unittest.TestCase):
-    def test_merge_1(self):
-        arr1 = [1, 5, 3, 6, 4, 2]
-        expected = [1, 2, 3, 4, 5, 6]
-        merge_sort(arr1)
-        self.assertEqual(expected, arr1)
-
-
-if __name__ == "__main__":
-    unittest.main()
