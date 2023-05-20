@@ -2,13 +2,14 @@ from merge_sort import merge_sort
 from insertion_sort import insertion_sort
 from selection_sort import selection_sort
 from bubble_sort import bubble_sort
+from quick_sort import quick_sort
 import unittest
 
 
 class Test(unittest.TestCase):
     def test_sort_1(self):
         sort_methods = [merge_sort, insertion_sort, selection_sort,
-                        bubble_sort]
+                        bubble_sort, quick_sort]
         expected = [1, 2, 3, 4, 5, 6]
 
         for sort_method in sort_methods:
